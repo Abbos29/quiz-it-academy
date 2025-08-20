@@ -1,0 +1,125 @@
+@import '../../styles/variables.scss';
+
+.quiz-result {
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 0.6s ease-out;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__header {
+    margin-bottom: $spacing-3xl;
+  }
+
+  &__icon {
+    font-size: 4rem;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__title {
+    font-size: $font-size-3xl;
+    font-weight: 700;
+    color: $text-primary;
+    margin-bottom: $spacing-md;
+  }
+
+  &__subtitle {
+    font-size: $font-size-lg;
+    color: $text-secondary;
+    line-height: 1.6;
+  }
+
+  &__card {
+    background: $bg-card;
+    border-radius: $border-radius-lg;
+    padding: $spacing-3xl;
+    box-shadow: $shadow-lg;
+    margin-bottom: $spacing-3xl;
+    text-align: left;
+  }
+
+  &__course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: $spacing-lg;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+  }
+
+  &__course-title {
+    font-size: $font-size-2xl;
+    font-weight: 700;
+    color: $primary-color;
+    margin: 0;
+  }
+
+  &__confidence {
+    background: $success-color;
+    color: white;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius;
+    font-size: $font-size-sm;
+    font-weight: 600;
+  }
+
+  &__course-description {
+    font-size: $font-size-lg;
+    color: $text-secondary;
+    margin-bottom: $spacing-2xl;
+    line-height: 1.6;
+  }
+
+  &__motivation {
+    background: rgba(99, 102, 241, 0.05);
+    border-left: 4px solid $primary-color;
+    padding: $spacing-xl;
+    border-radius: 0 $border-radius $border-radius 0;
+    margin-bottom: $spacing-2xl;
+
+    h3 {
+      font-size: $font-size-lg;
+      font-weight: 600;
+      color: $text-primary;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      color: $text-secondary;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-lg;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__footer {
+    text-align: center;
+    padding-top: $spacing-2xl;
+    border-top: 1px solid $border-color;
+  }
+
+  &__footer-text {
+    color: $text-secondary;
+    margin-bottom: $spacing-lg;
+    line-height: 1.6;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

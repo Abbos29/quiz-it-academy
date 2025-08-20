@@ -1,0 +1,132 @@
+@import "../../styles/variables.scss";
+
+.quiz-start {
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+
+  &__content {
+    padding: $spacing-2xl;
+  }
+
+  &__title {
+    font-size: $font-size-3xl;
+    font-weight: 700;
+    color: $text-primary;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__description {
+    font-size: $font-size-lg;
+    color: $text-secondary;
+    margin-bottom: $spacing-3xl;
+    line-height: 1.6;
+  }
+
+  &__levels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    // grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-2xl;
+    margin-bottom: $spacing-3xl;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-2xl;
+    flex-wrap: wrap;
+    padding-top: $spacing-2xl;
+    border-top: 1px solid $border-color;
+  }
+
+  &__info-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    color: $text-secondary;
+    font-size: $font-size-sm;
+  }
+
+  &__info-icon {
+    font-size: $font-size-lg;
+  }
+}
+
+.level-card {
+  background: $bg-card;
+  border-radius: $border-radius-lg;
+  padding: $spacing-2xl;
+  box-shadow: $shadow-md;
+  transition:
+    transform $transition-normal,
+    box-shadow $transition-normal;
+  text-align: left;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0;
+  }
+
+  &__badge {
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $spacing-sm;
+    font-size: $font-size-xs;
+    font-weight: 500;
+
+    &--easy {
+      background: rgba(16, 185, 129, 0.1);
+      color: $success-color;
+    }
+
+    &--medium {
+      background: rgba(245, 158, 11, 0.1);
+      color: $warning-color;
+    }
+  }
+
+  &__description {
+    color: $text-secondary;
+    margin-bottom: $spacing-lg;
+    line-height: 1.6;
+  }
+
+  &__features {
+    list-style: none;
+    margin-bottom: $spacing-xl;
+
+    li {
+      color: $text-secondary;
+      font-size: $font-size-sm;
+      margin-bottom: $spacing-sm;
+      position: relative;
+      padding-left: $spacing-lg;
+
+      &::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: $success-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
